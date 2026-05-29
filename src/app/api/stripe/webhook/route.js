@@ -3,7 +3,7 @@ import { stripe } from '@/lib/stripe';
 import { createAdminClient } from '@/lib/supabase/server';
 import { sendNotificationEmail } from '@/lib/email';
 
-export const config = { api: { bodyParser: false } };
+export const dynamic = 'force-dynamic';
 
 export async function POST(req) {
   const body = await req.text();
